@@ -10,5 +10,5 @@ If the red team member wants to change what tinybot is doing they simply need to
 2) An app will need to be added to the slack workspace used for C2. This can be done at https://api.slack.com/apps 
 3) Once the app is created it will need a token made in the OAth section of the app and the scopes of channels:read, channels:history, and 
 incoming-webhook added.
-4) To discover the channel ID run Invoke-WebRequest https://slack.com/api/channels.list?token=insert app OAth token here | select-object -Property content -ExpandProperty content
-5) To discver a messages ts run Invoke-WebRequest https://slack.com/api/converstation.history?token=insert app OAth token here"&"channel=insert channel id here | select-object -Property content -ExpandProperty content
+4) To discover the channel ID run Invoke-WebRequest https://slack.com/api/channels.list?token=insert_app_OAth_token_here | select-object -Property content -ExpandProperty content
+5) To discver a messages ts run Invoke-WebRequest https://slack.com/api/converstation.history?token=insert_app_OAth_token_here"&"channel=insert_channel_id_here | select-object -Property content -ExpandProperty content
